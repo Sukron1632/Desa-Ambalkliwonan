@@ -1,0 +1,1060 @@
+/********** Template CSS **********/
+:root {
+    --primary: #88B44E;
+    --secondary: #FB9F38;
+    --light: #F5F8F2;
+    --dark: #252C30;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+.fw-medium {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+    font-weight: 500;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+    color: var(--light);
+}
+
+.btn-secondary,
+.btn-outline-secondary:hover {
+    color: var(--dark);
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/*** Navbar ***/
+.sticky-top {
+    top: -150px;
+    transition: .5s;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* jarak antara logo dan teks */
+    padding: 0;
+    height: auto;
+    position: relative; /* bukan absolute */
+    width: auto;
+}
+
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 25px 0;
+    color: var(--dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand {
+        width: 126px;
+        height: 100px;
+    }
+
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 75px;
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background: rgba(136, 180, 78, .7);
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+    background-color: var(--dark);
+    border: 15px solid var(--dark);
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+    background: linear-gradient(rgba(136, 180, 78, .7), rgba(136, 180, 78, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+    font-size: 18px;
+    color: var(--light);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    bottom: -13px;
+    left: calc(25% - 13px);
+    background: var(--dark);
+    border: 10px solid #FFFFFF;
+    border-radius: 28px;
+}
+
+.section-title.text-center::before {
+    left: 25%;
+}
+
+.section-title.text-center::after {
+    left: calc(50% - 13px);
+}
+
+
+/*** Products ***/
+.product {
+    background: linear-gradient(rgba(136, 180, 78, .1), rgba(136, 180, 78, .1)), url(../img/product-bg.png) left bottom no-repeat;
+    background-size: auto;
+}
+
+.product-carousel .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.product-carousel .owl-nav .owl-prev,
+.product-carousel .owl-nav .owl-next {
+    margin: 0 10px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 55px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .15);
+    font-size: 25px;
+    transition: .5s;
+}
+
+.product-carousel .owl-nav .owl-prev:hover,
+.product-carousel .owl-nav .owl-next:hover {
+    background: #FFFFFF;
+    color: var(--primary);
+}
+
+
+/*** About ***/
+.video {
+    background: linear-gradient(rgba(136, 180, 78, .85), rgba(136, 180, 78, .85)), url(../img/video-bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.btn-play {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: 65px;
+    height: 75px;
+    border-radius: 100%;
+    border: none;
+    outline: none !important;
+    padding: 28px 30px 30px 38px;
+    background: #FFFFFF;
+}
+
+.btn-play:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    transition: all 200ms;
+}
+
+.btn-play span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    left: 13px;
+    border-left: 40px solid var(--primary);
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+        opacity: 0;
+    }
+}
+
+.modal-video .modal-dialog {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+.modal-video .modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+.modal-video .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    top: -30px;
+    z-index: 999;
+    font-size: 30px;
+    font-weight: normal;
+    color: #FFFFFF;
+    background: #000000;
+    opacity: 1;
+}
+
+
+/*** Store ***/
+.store-item .store-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 180, 78, .3);
+    opacity: 0;
+    transition: .5s;
+}
+
+.store-item:hover .store-overlay {
+    opacity: 1;
+}
+
+
+/*** Contact ***/
+.contact .btn-square {
+    width: 100px;
+    height: 100px;
+    border: 20px solid var(--light);
+    background: var(--primary);
+    border-radius: 50px;
+}
+
+
+/*** Testimonial ***/
+.testimonial {
+    background: linear-gradient(rgba(136, 180, 78, .85), rgba(136, 180, 78, .85)), url(../img/testimonial-bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.testimonial-item {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 30px solid var(--primary);
+}
+
+.testimonial-item img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 60px;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--dark);
+}
+
+
+/*** Footer ***/
+.footer {
+    color: #B0B9AE;
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #B0B9AE;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--light);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.copyright {
+    color: #B0B9AE;
+}
+
+.copyright {
+    background: #252525;
+}
+
+.copyright a:hover {
+    color: #FFFFFF !important;
+}
+
+.table-responsive {
+        background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Clearer border */
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    }
+
+    /* Table body text color for better contrast */
+    .table tbody tr td {
+        color: #333; /* Darker text for readability */
+    }
+
+    /* Hover effect for table rows */
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 123, 255, 0.1); /* Light blue hover background */
+        cursor: pointer; /* Indicates interactivity */
+    }
+
+    /* Striped table rows for better visual separation */
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.03); /* Light grey for odd rows */
+    }
+
+    /* Adjust padding for table cells */
+    .table th, .table td {
+        padding: 0.75rem; /* Increase padding for more breathing room */
+        vertical-align: middle; /* Align content vertically in the middle */
+    }
+
+    /* Sticky table header (for long tables) */
+    .table-responsive table thead th {
+        position: sticky;
+        top: 0;
+        color: white;
+        z-index: 10; /* Ensure header stays above content */
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1); /* Subtle shadow for sticky effect */
+    }
+
+    /* Improve active tab styling */
+    .nav-pills .nav-link.active, .nav-pills .nav-link.active:hover {
+        color: white;
+        font-weight: bold;
+    }
+
+    .nav-pills .nav-link {
+
+        margin: 0 5px; /* Spacing between tabs */
+        transition: all 0.3s ease; /* Smooth transition on hover/active */
+    }
+
+    .nav-pills .nav-link:hover:not(.active) {
+        background-color: rgba(0, 123, 255, 0.08); /* Light hover for inactive tabs */
+    }
+
+    /* Adjust spacing around tab buttons */
+    .nav-pills.justify-content-center {
+        margin-bottom: 2rem !important; /* More space below tabs */
+    }
+
+    /* Ensure text within the section title is clearly visible against the background */
+    .section-title h1, .section-title p {
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow for better readability */
+    }
+
+    /* Custom CSS for Gallery Section */
+
+/* Styling for horizontal scroll tabs */
+.custom-scroll-tabs {
+    -webkit-overflow-scrolling: touch; /* for smoother scrolling on iOS */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #007bff #f0f0f0; /* Thumb and Track color for Firefox */
+    padding-bottom: 10px; /* Tambahkan padding agar scrollbar tidak menutupi teks */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) but allow scrolling */
+.custom-scroll-tabs::-webkit-scrollbar {
+    height: 6px; /* Adjust height for horizontal scrollbar */
+}
+
+.custom-scroll-tabs::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.custom-scroll-tabs::-webkit-scrollbar-thumb {
+    background: var(--bs-primary); /* Use your primary theme color for the scrollbar thumb */
+    border-radius: 10px;
+}
+
+/* Ensure tabs don't wrap and have consistent styling */
+.custom-scroll-tabs .nav-item {
+    flex-shrink: 0; /* Prevent items from shrinking, crucial for horizontal scroll */
+    margin-right: 10px; /* Space between tabs */
+}
+
+.custom-scroll-tabs .nav-link {
+    white-space: nowrap; /* Prevent text wrapping within tabs */
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Default transparent border */
+}
+
+.custom-scroll-tabs .nav-link.active {
+    background-color: var(--bs-primary); /* Assuming --bs-primary is your primary color */
+    color: white;
+    border-color: var(--bs-primary); /* Active tab has primary border */
+}
+
+.custom-scroll-tabs .nav-link:not(.active):hover {
+    background-color: #e9ecef; /* Light gray on hover for non-active tabs */
+    color: var(--bs-primary); /* Primary color text on hover */
+    border-color: #e9ecef;
+}
+
+
+/* Card styling for gallery items (Tidak berubah, tetap seperti sebelumnya) */
+.gallery-card {
+    cursor: pointer; /* Indicate it's clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.75rem; /* Slightly more rounded corners */
+    overflow: hidden; /* Ensure content respects border-radius */
+    display: flex; /* Use flexbox for consistent card body alignment */
+    flex-direction: column;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px); /* Lift card slightly higher */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Stronger, more prominent shadow */
+}
+
+.gallery-card .card-img-top {
+    height: 200px; /* Fixed height for consistent image size in cards */
+    object-fit: cover; /* Crop image to cover the area without distorting aspect ratio */
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.gallery-card .card-body {
+    padding: 1rem; /* Adjust padding if needed */
+    flex-grow: 1; /* Allow card body to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.gallery-card .card-title {
+    font-size: 1.15rem; /* Slightly larger title */
+    margin-bottom: 0.25rem; /* Less space below title */
+}
+.gallery-card .card-text {
+    font-size: 0.85rem; /* Smaller sub-text */
+}
+
+
+/* Modal styling for detail view */
+
+/* 1. Gambar di dalam carousel agar terlihat penuh (fill the area) */
+#modalProductCarousel .carousel-item img {
+    height: 350px; /* Tinggi yang sedikit lebih besar, coba sesuaikan ini */
+    width: 100%; /* Pastikan mengisi lebar */
+    object-fit: cover; /* Ini yang terpenting: 'cover' akan memastikan gambar mengisi area, memotong jika aspek rasio tidak sesuai. */
+    border-radius: 0.5rem; /* Sedikit melengkung */
+    background-color: #f8f9fa; /* Background fallback jika gambar tidak memenuhi */
+}
+
+/* 2. Mengatur tombol carousel agar lebih simpel dan estetik */
+#modalProductCarousel .carousel-control-prev,
+#modalProductCarousel .carousel-control-next {
+    width: 10%; /* Kurangi lebar area klik tombol */
+    opacity: 0.8; /* Sedikit transparan saat tidak di-hover */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    /* Hilangkan background default Bootstrap untuk tampilan yang lebih bersih */
+    background-image: none;
+    background-color: transparent; /* Pastikan tidak ada warna background default */
+}
+
+#modalProductCarousel .carousel-control-prev:hover,
+#modalProductCarousel .carousel-control-next:hover {
+    opacity: 1; /* Penuh saat di-hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Background samar saat di-hover */
+}
+
+#modalProductCarousel .carousel-control-prev-icon,
+#modalProductCarousel .carousel-control-next-icon {
+    /* Ukuran ikon default Bootstrap mungkin sudah cukup, tapi bisa diatur ulang */
+    width: 1.5rem; /* Ukuran ikon */
+    height: 1.5rem; /* Ukuran ikon */
+    /* Warna ikon, Bootstrap biasanya putih */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e"); /* Contoh ikon panah kiri putih */
+}
+
+#modalProductCarousel .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); /* Contoh ikon panah kanan putih */
+}
+
+/* Optional: Pindahkan indikator carousel ke bawah atau sembunyikan jika tidak diperlukan */
+/* Jika Anda ingin menggunakan indikator dan menampilkannya, jangan sembunyikan */
+/* .carousel-indicators {
+    bottom: -30px; 
+    margin-bottom: 0;
+} */
+
+
+/* Styling for variation list (Tidak berubah, tetap seperti sebelumnya) */
+#variationList .list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border-color: #e9ecef;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+#variationList .list-group-item.active {
+    background-color: var(--bs-primary);
+    color: white;
+    border-color: var(--bs-primary);
+}
+
+#variationList .list-group-item.active h6,
+#variationList .list-group-item.active small {
+    color: white !important;
+}
+
+#variationList .list-group-item:not(.active):hover {
+    background-color: #f0f0f0;
+    transform: translateX(3px);
+}
+
+/* Optional: Carousel caption for variants (Tidak berubah, tetap seperti sebelumnya) */
+#modalProductCarousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+    white-space: nowrap;
+}
+#modalProductCarousel .carousel-caption h5 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+#modalProductCarousel .carousel-caption p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+/* Responsive modal buttons (Tidak berubah, tetap seperti sebelumnya) */
+#detailModal .modal-body .btn {
+    width: auto;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    #detailModal .modal-dialog {
+        margin: 0.5rem;
+    }
+    #detailModal .modal-body .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    #detailModal .modal-body .btn:last-child {
+        margin-bottom: 0;
+    }
+    /* Sesuaikan tinggi carousel untuk layar yang lebih kecil */
+    #modalProductCarousel .carousel-item img {
+        height: 250px; /* Lebih pendek di layar kecil */
+    }
+    #modalProductCarousel .carousel-caption {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+/* Optional: Add some top margin to the gallery section if it's too close to the section above */
+.container-xxl.py-5 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Card styling for gallery items (Tetap sama untuk gambar, sesuaikan untuk video) */
+.gallery-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Penting untuk overlay video icon */
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.gallery-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.gallery-card .card-body {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-card .card-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+.gallery-card .card-text {
+    font-size: 0.85rem;
+}
+
+/* Overlay untuk kartu video (mirip icon play YouTube) */
+.gallery-card.video-card .card-img-top-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Sesuaikan dengan tinggi card-img-top */
+    overflow: hidden;
+}
+
+.gallery-card.video-card .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card.video-card:hover .card-img-top {
+    transform: scale(1.05); /* Zoom sedikit saat hover */
+}
+
+.gallery-card.video-card .play-icon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay gelap */
+    opacity: 1; /* Selalu terlihat */
+    transition: background-color 0.3s ease;
+}
+
+.gallery-card.video-card:hover .play-icon-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Lebih gelap saat hover */
+}
+
+.gallery-card.video-card .play-icon-overlay i {
+    font-size: 3.5rem; /* Ukuran ikon play */
+    color: #fff;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.7)); /* Shadow agar lebih menonjol */
+}
+
+/* Waktu durasi di thumbnail video */
+.gallery-card.video-card .duration-overlay {
+    position: absolute;
+    bottom: 8px; /* Sesuaikan posisi dari bawah */
+    right: 8px; /* Sesuaikan posisi dari kanan */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 2; /* Pastikan di atas overlay lain */
+}
+
+
+/* Modal styling for image detail view (#imageDetailModal) */
+
+#modalImageCarousel .carousel-item img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+#modalImageCarousel .carousel-control-prev,
+#modalImageCarousel .carousel-control-next {
+    width: 8%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    background-image: none;
+    background-color: transparent;
+}
+
+#modalImageCarousel .carousel-control-prev:hover,
+#modalImageCarousel .carousel-control-next:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#modalImageCarousel .carousel-control-prev-icon,
+#modalImageCarousel .carousel-control-next-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.5));
+}
+
+#modalImageCarousel .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0 0.5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    max-width: 80%;
+    justify-content: center;
+}
+
+#modalImageCarousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #fff;
+    opacity: 0.5;
+    margin: 0 4px;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#modalImageCarousel .carousel-indicators button.active {
+    opacity: 1;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+
+/* Modal styling for video detail view (#videoDetailModal) */
+#videoDetailModal .modal-header .btn-close {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#videoDetailModal .modal-body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Style untuk video terkait */
+#relatedVideosContainer .list-group-item {
+    display: flex;
+    align-items: flex-start; /* Align thumbnail to top */
+    padding: 0.5rem 0.25rem; /* Kurangi padding untuk compact */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none; /* Hilangkan border default */
+    border-bottom: 1px solid #eee; /* Beri garis bawah tipis */
+    border-radius: 0; /* Hilangkan radius */
+}
+#relatedVideosContainer .list-group-item:last-child {
+    border-bottom: none; /* Hilangkan garis bawah item terakhir */
+}
+
+#relatedVideosContainer .list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+#relatedVideosContainer .list-group-item img {
+    width: 100px; /* Lebar thumbnail video terkait */
+    height: 60px; /* Tinggi thumbnail video terkait */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Jangan biarkan gambar menyusut */
+}
+
+#relatedVideosContainer .list-group-item .video-info {
+    flex-grow: 1;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+#relatedVideosContainer .list-group-item .video-info .title {
+    font-weight: 500;
+    color: #212529;
+    margin-bottom: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi judul 2 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#relatedVideosContainer .list-group-item .video-info .channel-date {
+    color: #6c757d;
+    font-size: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #imageDetailModal .modal-dialog,
+    #videoDetailModal .modal-dialog {
+        margin: 0.5rem;
+    }
+    #modalImageCarousel .carousel-item img {
+        height: 250px;
+    }
+    #modalImageCarousel .carousel-indicators {
+        bottom: 5px;
+        padding: 0 0.3rem;
+    }
+    #modalImageCarousel .carousel-indicators button {
+        width: 6px;
+        height: 6px;
+        margin: 0 3px;
+    }
+
+    #videoDetailModal .modal-dialog {
+        max-width: 95%; /* Lebih lebar di layar kecil */
+    }
+    #videoDetailModal .modal-body .row > div {
+        margin-bottom: 1rem; /* Jarak antar kolom di mobile */
+    }
+    #relatedVideosContainer .list-group-item img {
+        width: 80px;
+        height: 45px;
+    }
+}
+
+/* Custom scroll for tabs (tetap sama) */
+.custom-scroll-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* for smoother scrolling on iOS */
+}
+
+/* Hide scrollbar for custom-scroll-tabs on WebKit browsers */
+.custom-scroll-tabs::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for custom-scroll-tabs on Firefox */
+.custom-scroll-tabs {
+    scrollbar-width: none;
+}

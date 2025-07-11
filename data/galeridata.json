@@ -1,0 +1,125 @@
+{
+  "umkm": [
+    {
+      "id": 1,
+      "title": "Keripik Singkong Renyah",
+      "category": "UMKM Makanan Ringan",
+      "description": "Keripik singkong buatan rumahan dengan bumbu rempah pilihan, renyah dan gurih. Cocok untuk cemilan keluarga atau oleh-oleh khas Desa Ambalkliwonan. Dibuat dengan singkong organik dari petani lokal.",
+      "whatsapp": "6281234567890",
+      "phone": "081234567890",
+      "variations": [
+        {
+          "name": "Kemasan 150gr",
+          "image": "img/umkm-keripik-150gr.jpg",
+          "price": "Rp 15.000,-"
+        },
+        {
+          "name": "Kemasan 300gr",
+          "image": "img/umkm-keripik-300gr.jpg",
+          "price": "Rp 25.000,-"
+        },
+        {
+          "name": "Kemasan 500gr (Promo)",
+          "image": "img/umkm-keripik-500gr.jpg",
+          "price": "Rp 38.000,-"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Kopi Bubuk Khas Ambalkliwonan",
+      "category": "UMKM Minuman",
+      "description": "Kopi robusta asli dari perkebunan lokal Desa Ambalkliwonan. Diolah secara tradisional, menghasilkan aroma dan rasa yang kuat. Tersedia dalam berbagai tingkat gilingan.",
+      "whatsapp": "6281234567891",
+      "phone": "081234567891",
+      "variations": [
+        {
+          "name": "Giling Kasar (250gr)",
+          "image": "img/umkm-kopi-kasar.jpg",
+          "price": "Rp 45.000,-"
+        },
+        {
+          "name": "Giling Halus (250gr)",
+          "image": "img/umkm-kopi-halus.jpg",
+          "price": "Rp 45.000,-"
+        },
+        {
+          "name": "Biji Roas (500gr)",
+          "image": "img/umkm-kopi-biji.jpg",
+          "price": "Rp 85.000,-"
+        }
+      ]
+    }
+  ],
+  "pertanian": [
+    {
+      "id": 1,
+      "title": "Bibit Mangga Harum Manis",
+      "category": "Bibit Tanaman",
+      "description": "Bibit mangga harum manis berkualitas unggul, siap tanam. Hasil pembibitan petani lokal dengan perawatan terbaik.",
+      "whatsapp": "6281234567892",
+      "phone": "081234567892",
+      "variations": [
+        {
+          "name": "Tinggi 50cm",
+          "image": "img/pertanian-mangga-50cm.jpg",
+          "price": "Rp 30.000,-"
+        },
+        {
+          "name": "Tinggi 100cm",
+          "image": "img/pertanian-mangga-100cm.jpg",
+          "price": "Rp 50.000,-"
+        }
+      ]
+    }
+  ],
+  "peternakan": [
+    {
+      "id": 1,
+      "title": "Telur Ayam Kampung Organik",
+      "category": "Hasil Ternak",
+      "description": "Telur ayam kampung organik dari peternakan rumahan Desa Ambalkliwonan. Pakan alami tanpa antibiotik, kaya nutrisi.",
+      "whatsapp": "6281234567893",
+      "phone": "081234567893",
+      "variations": [
+        {
+          "name": "Pack 6 Butir",
+          "image": "img/peternakan-telur-6.jpg",
+          "price": "Rp 18.000,-"
+        },
+        {
+          "name": "Pack 10 Butir",
+          "image": "img/peternakan-telur-10.jpg",
+          "price": "Rp 28.000,-"
+        },
+        {
+          "name": "Tray 30 Butir",
+          "image": "img/peternakan-telur-30.jpg",
+          "price": "Rp 75.000,-"
+        }
+      ]
+    }
+  ],
+  "perikanan": [
+    {
+      "id": 1,
+      "title": "Ikan Nila Segar",
+      "category": "Hasil Perikanan",
+      "description": "Ikan nila segar hasil budidaya kolam air tawar Desa Ambalkliwonan. Cocok untuk berbagai masakan.",
+      "whatsapp": "6281234567894",
+      "phone": "081234567894",
+      "variations": [
+        {
+          "name": "Ukuran Kecil (200-300gr)",
+          "image": "img/perikanan-nila-kecil.jpg",
+          "price": "Rp 20.000,-/kg"
+        },
+        {
+          "name": "Ukuran Sedang (300-500gr)",
+          "image": "img/perikanan-nila-sedang.jpg",
+          "price": "Rp 25.000,-/kg"
+        }
+      ]
+    }
+  ]
+}

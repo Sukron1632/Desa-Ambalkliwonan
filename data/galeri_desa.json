@@ -1,0 +1,118 @@
+{
+  "acara_kebudayaan": [
+    {
+      "id": 1,
+      "title": "Festival Panen Raya Desa",
+      "category": "Acara Kebudayaan",
+      "description": "Festival tahunan untuk merayakan hasil panen, menampilkan tarian tradisional, musik daerah, dan kuliner khas. Acara ini melibatkan seluruh lapisan masyarakat dan wisatawan.",
+      "date": "15 Agustus 2024",
+      "time": "09:00 - Selesai",
+      "location": "Lapangan Utama Desa Kersik",
+      "contact_person": "Bapak Kepala Desa (081234567890)",
+      "whatsapp": "6281234567890",
+      "type": "image",
+      "images": [
+        "img/galeri/festival-panen-1.jpg",
+        "img/galeri/festival-panen-2.jpg",
+        "img/galeri/festival-panen-3.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Pementasan Wayang Kulit",
+      "category": "Seni Pertunjukan",
+      "description": "Pagelaran wayang kulit rutin setiap malam Jumat Kliwon, menampilkan dalang lokal dengan cerita-cerita pewayangan klasik yang mendidik dan menghibur.",
+      "date": "Setiap Jumat Kliwon",
+      "time": "20:00 - Selesai",
+      "location": "Balai Desa Kersik",
+      "contact_person": "Sekretaris Desa (081234567891)",
+      "whatsapp": "6281234567891",
+      "type": "image",
+      "images": [
+        "img/galeri/wayang-kulit-1.jpg",
+        "img/galeri/wayang-kulit-2.jpg"
+      ]
+    }
+  ],
+  "wisata_alam": [
+    {
+      "id": 1,
+      "title": "Air Terjun Pelangi",
+      "category": "Destinasi Wisata",
+      "description": "Air terjun alami dengan formasi pelangi yang sering terlihat di pagi hari. Cocok untuk hiking ringan dan menikmati keindahan alam.",
+      "date": "Buka Setiap Hari",
+      "time": "08:00 - 17:00",
+      "location": "Dusun Curug Indah, Desa Kersik",
+      "contact_person": "Pengelola Wisata (081234567892)",
+      "whatsapp": "6281234567892",
+      "type": "image",
+      "images": [
+        "img/galeri/air-terjun-1.jpg",
+        "img/galeri/air-terjun-2.jpg",
+        "img/galeri/air-terjun-3.jpg"
+      ]
+    }
+  ],
+  "pembangunan_desa": [
+    {
+      "id": 1,
+      "title": "Pembangunan Jembatan Swadaya",
+      "category": "Proyek Pembangunan",
+      "description": "Proyek pembangunan jembatan penghubung antar dusun yang dikerjakan secara swadaya oleh masyarakat desa untuk meningkatkan aksesibilitas.",
+      "date": "Maret - Mei 2024",
+      "time": "Sesuai Jadwal Gotong Royong",
+      "location": "Sungai Kersik",
+      "contact_person": "Kepala Dusun (081234567893)",
+      "whatsapp": "6281234567893",
+      "type": "image",
+      "images": [
+        "img/galeri/jembatan-1.jpg",
+        "img/galeri/jembatan-2.jpg"
+      ]
+    }
+  ],
+  "video_desa": [
+    {
+      "id": 1,
+      "title": "Profil Desa Kersik Terbaru",
+      "category": "Video Profil",
+      "description": "Video profil yang menampilkan gambaran umum Desa Kersik, mulai dari keindahan alam, kegiatan masyarakat, hingga potensi unggulan desa.",
+      "date": "10 Juni 2024",
+      "duration": "03:45",
+      "channel": "Desa Kersik Official",
+      "video_url": "https://www.youtube.com/embed/VIDEO_ID_PROFIL_DESA",
+      "thumbnail": "img/galeri/video-thumbnail-profil.jpg",
+      "type": "video"
+    },
+    {
+      "id": 2,
+      "title": "Dokumentasi Festival Panen Raya",
+      "category": "Video Kegiatan",
+      "description": "Dokumentasi lengkap acara Festival Panen Raya yang diselenggarakan di Desa Kersik, menangkap momen-momen terbaik dan antusiasme warga.",
+      "date": "20 Agustus 2024",
+      "duration": "08:10",
+      "channel": "Desa Kersik Official",
+      "video_url": "https://www.youtube.com/embed/VIDEO_ID_FESTIVAL",
+      "thumbnail": "img/galeri/video-thumbnail-festival.jpg",
+      "type": "video"
+    }
+  ],
+  "lain_lain": [
+    {
+      "id": 1,
+      "title": "Kegiatan Posyandu Rutin",
+      "category": "Kesehatan Masyarakat",
+      "description": "Kegiatan pos pelayanan terpadu (Posyandu) rutin bulanan untuk pemeriksaan kesehatan balita, ibu hamil, dan lansia.",
+      "date": "Setiap tanggal 5",
+      "time": "08:00 - 12:00",
+      "location": "Posyandu Mawar, Desa Kersik",
+      "contact_person": "Bidan Desa (081234567894)",
+      "whatsapp": "6281234567894",
+      "type": "image",
+      "images": [
+        "img/galeri/posyandu-1.jpg",
+        "img/galeri/posyandu-2.jpg"
+      ]
+    }
+  ]
+}
