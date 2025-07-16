@@ -223,20 +223,20 @@
 
  // --- GALERI POTENSI DESA SCRIPTS START ---
 
-    const JSON_DATA_URL = 'data/galeridata.json'; // URL ke file JSON Anda
+    const UMKM_DATA_URL = 'data/galeridata.json'; // URL ke file JSON Anda
 
-    let galleryItemsData = {}; // Variabel untuk menyimpan data setelah di-fetch
+    let umkmData = {}; // Variabel untuk menyimpan data setelah di-fetch
     let currentCarouselInstance = null; // Untuk menyimpan instance carousel agar bisa dihancurkan/dibuat ulang
 
     // Fungsi untuk mengambil data JSON
     async function fetchgaleridata() { // Nama fungsi disesuaikan dengan yang Anda gunakan
         try {
-            const response = await fetch(JSON_DATA_URL);
+            const response = await fetch(UMKM_DATA_URL);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            galleryItemsData = await response.json();
-            console.log('Data galeri berhasil dimuat:', galleryItemsData);
+            umkmData = await response.json();
+            console.log('Data galeri berhasil dimuat:', umkmData);
             renderGalleryCards(); // Panggil fungsi untuk merender kartu setelah data dimuat
         } catch (error) {
             console.error('Gagal memuat data galeri:', error);
@@ -254,11 +254,11 @@
 
     // Fungsi untuk merender kartu galeri untuk setiap kategori
     function renderGalleryCards() {
-        for (const category in galleryItemsData) {
+        for (const category in umkmData) {
             const rowElement = document.getElementById(`${category}-gallery-row`);
             if (rowElement) {
                 rowElement.innerHTML = ''; // Kosongkan baris sebelum mengisi
-                galleryItemsData[category].forEach((item, index) => {
+                umkmData[category].forEach((item, index) => {
                     // Gunakan gambar pertama dari variasi sebagai gambar utama kartu
                     const mainImage = item.variations && item.variations.length > 0 ? item.variations[0].image : 'https://via.placeholder.com/600x400?text=No+Image';
 
@@ -323,7 +323,7 @@
         const category = button.getAttribute('data-category');
         const itemId = parseInt(button.getAttribute('data-item'));
 
-        const item = galleryItemsData[category].find(dataItem => dataItem.id === itemId);
+        const item = umkmData[category].find(dataItem => dataItem.id === itemId);
 
         if (item) {
             const modalTitle = detailModal.querySelector('#modalTitle');
@@ -557,19 +557,19 @@
 
 // --- GALERI DESA SCRIPTS START ---
 
-    const JSON_DATA_URL = 'data/galeri_desa.json';
-    let galleryItemsData = {};
+    const GALLERY_DATA_URL = 'data/galeri_desa.json';
+    let galleryData = {};
     let currentImageCarouselInstance = null; // Instance untuk carousel gambar di modal
     let currentlyPlayingVideoId = null; // Melacak video yang sedang diputar
 
     async function fetchGalleryData() {
         try {
-            const response = await fetch(JSON_DATA_URL);
+            const response = await fetch(GALLERY_DATA_URL);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            galleryItemsData = await response.json();
-            console.log('Data galeri desa berhasil dimuat:', galleryItemsData);
+            galleryData = await response.json();
+            console.log('Data galeri desa berhasil dimuat:', galleryData);
             renderGalleryCards();
         } catch (error) {
             console.error('Gagal memuat data galeri desa:', error);
@@ -600,7 +600,7 @@
 
             if (rowElement) {
                 rowElement.innerHTML = '';
-                const items = galleryItemsData[categoryKey];
+                const items = galleryData[categoryKey];
 
                 if (items && items.length > 0) {
                     items.forEach((item, index) => {
@@ -666,7 +666,7 @@
 
         if (type !== 'image') return; // Pastikan hanya untuk tipe gambar
 
-        const item = galleryItemsData[category].find(dataItem => dataItem.id === itemId);
+        const item = galleryData[category].find(dataItem => dataItem.id === itemId);
 
         if (item) {
             const modalTitle = imageDetailModal.querySelector('#imageModalTitle');
@@ -764,7 +764,7 @@
 
         if (type !== 'video') return; // Pastikan hanya untuk tipe video
 
-        const item = galleryItemsData[category].find(dataItem => dataItem.id === itemId);
+        const item = galleryData[category].find(dataItem => dataItem.id === itemId);
 
         if (item) {
             const videoPlayer = videoDetailModal.querySelector('#videoPlayer');
@@ -797,7 +797,7 @@
             videoModalDescription.textContent = item.description;
 
             // Memuat video terkait (dari kategori 'video_desa')
-            const relatedVideos = galleryItemsData['video_desa'].filter(
+            const relatedVideos = galleryData['video_desa'].filter(
                 video => video.id !== item.id && video.type === 'video'
             );
 
@@ -822,7 +822,7 @@
                         e.preventDefault();
                         const relatedCategory = this.getAttribute('data-category');
                         const relatedItemId = parseInt(this.getAttribute('data-item-id'));
-                        const relatedItemData = galleryItemsData[relatedCategory].find(data => data.id === relatedItemId);
+                        const relatedItemData = galleryData[relatedCategory].find(data => data.id === relatedItemId);
 
                         if (relatedItemData && relatedItemData.type === 'video') {
                             // Muat ulang konten modal video dengan video baru
@@ -859,7 +859,7 @@
         relatedVideosContainer.innerHTML = ''; // Bersihkan kontainer
         noRelatedVideosMsg.style.display = 'none';
 
-        const relatedVideos = galleryItemsData['video_desa'].filter(
+        const relatedVideos = galleryData['video_desa'].filter(
             video => video.id !== excludeId && video.type === 'video'
         );
 
@@ -884,7 +884,7 @@
                     e.preventDefault();
                     const relatedCategory = this.getAttribute('data-category');
                     const relatedItemId = parseInt(this.getAttribute('data-item-id'));
-                    const relatedItemData = galleryItemsData[relatedCategory].find(data => data.id === relatedItemId);
+                    const relatedItemData = galleryData[relatedCategory].find(data => data.id === relatedItemId);
 
                     if (relatedItemData && relatedItemData.type === 'video') {
                         videoDetailModal.querySelector('#videoPlayer').src = relatedItemData.video_url + "?autoplay=1&rel=0";

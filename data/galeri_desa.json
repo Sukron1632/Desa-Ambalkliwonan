@@ -12,9 +12,9 @@
       "whatsapp": "6281234567890",
       "type": "image",
       "images": [
-        "img/galeri/festival-panen-1.jpg",
-        "img/galeri/festival-panen-2.jpg",
-        "img/galeri/festival-panen-3.jpg"
+        "img/festival-panen-1.jpg",
+        "img/festival-panen-2.jpg",
+        "img/festival-panen-3.jpg"
       ]
     },
     {
@@ -29,27 +29,8 @@
       "whatsapp": "6281234567891",
       "type": "image",
       "images": [
-        "img/galeri/wayang-kulit-1.jpg",
-        "img/galeri/wayang-kulit-2.jpg"
-      ]
-    }
-  ],
-  "wisata_alam": [
-    {
-      "id": 1,
-      "title": "Air Terjun Pelangi",
-      "category": "Destinasi Wisata",
-      "description": "Air terjun alami dengan formasi pelangi yang sering terlihat di pagi hari. Cocok untuk hiking ringan dan menikmati keindahan alam.",
-      "date": "Buka Setiap Hari",
-      "time": "08:00 - 17:00",
-      "location": "Dusun Curug Indah, Desa Kersik",
-      "contact_person": "Pengelola Wisata (081234567892)",
-      "whatsapp": "6281234567892",
-      "type": "image",
-      "images": [
-        "img/galeri/air-terjun-1.jpg",
-        "img/galeri/air-terjun-2.jpg",
-        "img/galeri/air-terjun-3.jpg"
+        "img/wayang-kulit-1.jpg",
+        "img/wayang-kulit-2.jpg"
       ]
     }
   ],
@@ -66,8 +47,8 @@
       "whatsapp": "6281234567893",
       "type": "image",
       "images": [
-        "img/galeri/jembatan-1.jpg",
-        "img/galeri/jembatan-2.jpg"
+        "img/jembatan-1.jpg",
+        "img/jembatan-2.jpg"
       ]
     }
   ],
@@ -81,7 +62,7 @@
       "duration": "03:45",
       "channel": "Desa Kersik Official",
       "video_url": "https://www.youtube.com/embed/VIDEO_ID_PROFIL_DESA",
-      "thumbnail": "img/galeri/video-thumbnail-profil.jpg",
+      "thumbnail": "img/video-thumbnail-profil.jpg",
       "type": "video"
     },
     {
@@ -93,7 +74,7 @@
       "duration": "08:10",
       "channel": "Desa Kersik Official",
       "video_url": "https://www.youtube.com/embed/VIDEO_ID_FESTIVAL",
-      "thumbnail": "img/galeri/video-thumbnail-festival.jpg",
+      "thumbnail": "img/video-thumbnail-festival.jpg",
       "type": "video"
     }
   ],
@@ -110,9 +91,36 @@
       "whatsapp": "6281234567894",
       "type": "image",
       "images": [
-        "img/galeri/posyandu-1.jpg",
-        "img/galeri/posyandu-2.jpg"
+        "img/posyandu-1.jpg",
+        "img/posyandu-2.jpg"
       ]
+    }
+  ],
+    "buku_desa": [
+    {
+      "id": 1,
+      "title": "Profil Desa Ambalkliwonan 2024",
+      "category": "Profil Desa",
+      "description": "Buku profil lengkap Desa Ambalkliwonan tahun 2024",
+      "cover_image": "img/books/profil-desa-cover.jpg",
+      "pdf_url": "docs/profil-desa-2024.pdf",
+      "file_size": "2.5 MB",
+      "pages": 45,
+      "year": "2024",
+      "type": "pdf"
+    },
+    {
+      "id": 2,
+      "title": "Sejarah Desa Ambalkliwonan",
+      "category": "Sejarah",
+      "description": "Dokumentasi sejarah dan perkembangan Desa Ambalkliwonan",
+      "cover_image": "img/books/sejarah-desa-cover.jpg",
+      "pdf_url": "docs/sejarah-desa.pdf",
+      "file_size": "3.1 MB",
+      "pages": 60,
+      "year": "2023",
+      "type": "pdf"
     }
   ]
 }
+

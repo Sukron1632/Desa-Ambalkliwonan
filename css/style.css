@@ -90,17 +90,47 @@
     transition: .5s;
 }
 
+.navbar {
+    padding: 0;
+}
+
 .navbar .navbar-brand {
     display: flex;
     align-items: center;
-    gap: 10px; /* jarak antara logo dan teks */
+    gap: 6px; /* diperkecil dari 10px */
     padding: 0;
     height: auto;
-    position: relative; /* bukan absolute */
+    position: relative;
     width: auto;
+    flex-shrink: 1; /* tambahkan ini */
+    min-width: 0; /* tambahkan ini */
 }
 
+.navbar-brand img {
+    height: 60px; /* diperkecil dari 100px */
+    width: auto;
+    max-width: 60px; /* batasi lebar maksimal */
+}
 
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap; /* tambahkan ini */
+    overflow: hidden; /* tambahkan ini */
+}
+
+.navbar-brand .title {
+    font-weight: 700;
+    font-size: 0.9rem; /* diperkecil dari ukuran default */
+    line-height: 1.2;
+}
+
+.navbar-brand .subtitle {
+    font-size: 0.7rem; /* diperkecil dari ukuran default */
+    line-height: 1.2;
+}
+
+/* Sisakan semua CSS lainnya yang ada tetap sama */
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
@@ -125,22 +155,37 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-brand {
-        width: 126px;
-        height: 100px;
-    }
-
-    .navbar .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
+    /* Perubahan hanya pada bagian ini untuk memperkecil jarak dropdown */
     .navbar .navbar-nav {
-        margin-top: 75px;
+        margin-top: 15px; /* Diubah dari 75px ke 15px */
         border-top: 1px solid #EEEEEE;
+        padding-top: 5px; /* Ditambahkan untuk memberi sedikit jarak */
+    }
+    
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 8px 0; /* Diperkecil dari 10px 0 */
+    }
+    
+    /* Biarkan bagian lainnya tetap sama */
+    .navbar .navbar-brand {
+        width: auto;
+        height: auto;
+        max-width: 70%;
+    }
+    
+    .navbar-brand img {
+        height: 50px;
+    }
+    
+    .navbar-brand .title {
+        font-size: 0.8rem;
+    }
+    
+    .navbar-brand .subtitle {
+        font-size: 0.6rem;
     }
 }
-
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -1057,4 +1102,54 @@
 /* Hide scrollbar for custom-scroll-tabs on Firefox */
 .custom-scroll-tabs {
     scrollbar-width: none;
+}
+
+/* Book Card Styling */
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+}
+
+.book-card .card-img-top {
+    height: 320px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.book-card .card-body {
+    background: #fff;
+    padding: 1.25rem;
+}
+
+.book-card .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* PDF Modal Styling */
+#pdfDetailModal .modal-content {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#pdfDetailModal .modal-body {
+    background: #f8f9fa;
+}
+
+#pdfViewer {
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
