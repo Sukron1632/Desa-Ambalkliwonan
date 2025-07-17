@@ -214,7 +214,9 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    background: rgba(136, 180, 78, .7);
+background: rgba(210, 180, 140, 0.4); /* coklat muda transparan */
+color: black;
+
     z-index: 1;
 }
 
@@ -247,9 +249,11 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(136, 180, 78, .7), rgba(136, 180, 78, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(210, 180, 140, 0.4), rgba(210, 180, 140, 0.4)), url(../img/galeri_desa/header.jpeg) center center no-repeat;
     background-size: cover;
+    color: black;
 }
+
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);

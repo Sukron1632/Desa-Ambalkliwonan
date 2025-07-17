@@ -2,23 +2,6 @@
   "acara_kebudayaan": [
     {
       "id": 1,
-      "title": "Festival Panen Raya Desa",
-      "category": "Acara Kebudayaan",
-      "description": "Festival tahunan untuk merayakan hasil panen, menampilkan tarian tradisional, musik daerah, dan kuliner khas. Acara ini melibatkan seluruh lapisan masyarakat dan wisatawan.",
-      "date": "15 Agustus 2024",
-      "time": "09:00 - Selesai",
-      "location": "Lapangan Utama Desa Kersik",
-      "contact_person": "Bapak Kepala Desa (081234567890)",
-      "whatsapp": "6281234567890",
-      "type": "image",
-      "images": [
-        "img/festival-panen-1.jpg",
-        "img/festival-panen-2.jpg",
-        "img/festival-panen-3.jpg"
-      ]
-    },
-    {
-      "id": 2,
       "title": "Pementasan Wayang Kulit",
       "category": "Seni Pertunjukan",
       "description": "Pagelaran wayang kulit rutin setiap malam Jumat Kliwon, menampilkan dalang lokal dengan cerita-cerita pewayangan klasik yang mendidik dan menghibur.",
@@ -29,8 +12,7 @@
       "whatsapp": "6281234567891",
       "type": "image",
       "images": [
-        "img/wayang-kulit-1.jpg",
-        "img/wayang-kulit-2.jpg"
+        "img/galeri_desa/wayangan.jpg"
       ]
     }
   ],
@@ -56,28 +38,11 @@
     {
       "id": 1,
       "title": "Profil Desa Kersik Terbaru",
-      "category": "Video Profil",
       "description": "Video profil yang menampilkan gambaran umum Desa Kersik, mulai dari keindahan alam, kegiatan masyarakat, hingga potensi unggulan desa.",
-      "date": "10 Juni 2024",
-      "duration": "03:45",
-      "channel": "Desa Kersik Official",
-      "video_url": "https://www.youtube.com/embed/VIDEO_ID_PROFIL_DESA",
-      "thumbnail": "img/video-thumbnail-profil.jpg",
-      "type": "video"
-    },
-    {
-      "id": 2,
-      "title": "Dokumentasi Festival Panen Raya",
-      "category": "Video Kegiatan",
-      "description": "Dokumentasi lengkap acara Festival Panen Raya yang diselenggarakan di Desa Kersik, menangkap momen-momen terbaik dan antusiasme warga.",
-      "date": "20 Agustus 2024",
-      "duration": "08:10",
-      "channel": "Desa Kersik Official",
-      "video_url": "https://www.youtube.com/embed/VIDEO_ID_FESTIVAL",
-      "thumbnail": "img/video-thumbnail-festival.jpg",
+      "video_url": "https://youtu.be/4VxhijJ5mHo",
       "type": "video"
     }
-  ],
+],
   "lain_lain": [
     {
       "id": 1,
