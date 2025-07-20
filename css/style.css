@@ -195,10 +195,32 @@
 
   .navbar-toggler {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .navbar > .container {
+    padding-right: 40px; /* Give space for the toggle button */
+  }
+
+  .navbar-brand {
+    padding: 0.25rem 0;
+    margin: 0 auto;
   }
 
   .navbar-collapse {
@@ -243,7 +265,15 @@
   }
 
   .navbar-toggler {
-    padding: 0.2rem 0.4rem;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.1em;
+    height: 1.1em;
   }
 }
 
