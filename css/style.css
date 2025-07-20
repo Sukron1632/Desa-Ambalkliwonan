@@ -157,55 +157,22 @@
 /* Small mobile adjustments */
 @media (max-width: 575.98px) {
   .navbar {
-    padding: 0.5rem;
-  }
-
-  .navbar > .container {
-    position: relative;
-    padding: 0;
+    position: relative; /* Ensure proper positioning context */
   }
 
   .navbar-brand {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 0;
-    padding: 0.5rem 0;
-  }
-
-  .navbar-brand img {
-    height: 50px;
-    margin-bottom: 0.5rem;
-  }
-
-  .navbar-brand .d-flex.flex-column {
-    align-items: center;
-    padding: 0;
-  }
-
-  .navbar-brand .fw-bold {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .navbar-brand .text-muted {
-    font-size: 0.8rem;
-    text-align: center;
+    padding-right: 40px; /* Give space for the toggle button */
   }
 
   .navbar-toggler {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 0.3rem;
-    font-size: 0.9rem;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    padding: 4px 8px;
     width: 32px;
     height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: transparent;
+    z-index: 1030; /* Ensure button stays above other content */
     margin: 0;
   }
 
@@ -214,66 +181,110 @@
     height: 1.2em;
   }
 
-  .navbar > .container {
-    padding-right: 40px; /* Give space for the toggle button */
+  /* Ensure collapse menu appears below the header */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1020;
+  }
+
+  .navbar {
+    padding: 0.25rem; /* Reduced padding */
   }
 
   .navbar-brand {
-    padding: 0.25rem 0;
-    margin: 0 auto;
+    flex-direction: row; /* Change to row for more compact layout */
+    align-items: center;
+    max-width: calc(100% - 45px);
+    padding: 0;
+    margin: 0;
   }
 
+  .navbar-brand img {
+    height: 40px; /* Smaller logo */
+    width: auto;
+    margin: 0 8px 0 0; /* Add right margin, remove bottom margin */
+  }
+
+  .navbar-brand .d-flex.flex-column {
+    align-items: flex-start;
+    padding: 0;
+    /* Tambahkan ini untuk memastikan teks memecah baris jika terlalu panjang */
+    min-width: 0; /* Penting untuk flex item agar menyusut */
+    flex-shrink: 1; /* Memungkinkan item menyusut */
+  }
+
+  .navbar-brand .fw-bold {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    /* Pastikan teks dapat memecah baris */
+    white-space: normal;
+    word-break: break-word; /* Memaksa pemisahan kata jika diperlukan */
+  }
+
+  .navbar-brand .text-muted {
+    font-size: 0.75rem;
+    line-height: 1;
+    /* Pastikan teks dapat memecah baris */
+    white-space: normal;
+    word-break: break-word; /* Memaksa pemisahan kata jika diperlukan */
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem;
+    font-size: 0.85rem;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.1em;
+    height: 1.1em;
+  }
+
+  .navbar > .container {
+    padding: 0 0.5rem;
+    min-height: 50px; /* Fixed height for consistency */
+  }
+
+  /* Collapse menu styling */
   .navbar-collapse {
-    margin-top: 1rem;
-    background: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
     padding: 0.5rem;
   }
 
-  .navbar-nav {
-    margin: 0 !important;
-  }
-
-  .nav-item {
-    text-align: center;
-  }
-
   .nav-link {
-    padding: 0.75rem !important;
-    border-radius: 0.25rem;
-    transition: all 0.2s ease;
-  }
-
-  .nav-link:active {
-    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 0.75rem !important;
   }
 }
 
 /* Extra small devices */
 @media (max-width: 359.98px) {
   .navbar-brand img {
-    height: 45px;
+    height: 35px;
   }
 
   .navbar-brand .fw-bold {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* sedikit lebih kecil untuk perangkat yang sangat kecil */
+    line-height: 1.1;
+    white-space: normal; /* Memastikan pembungkus kata */
+    word-break: break-word; /* Memaksa pemisahan kata jika tidak cukup ruang */
   }
 
   .navbar-brand .text-muted {
-    font-size: 0.75rem;
-  }
-
-  .navbar-toggler {
-    top: 0.4rem;
-    right: 0.4rem;
-    width: 28px;
-    height: 28px;
-  }
-
-  .navbar-toggler-icon {
-    width: 1.1em;
-    height: 1.1em;
+    font-size: 0.7rem; /* sedikit lebih kecil untuk perangkat yang sangat kecil */
+    line-height: 1;
+    white-space: normal; /* Memastikan pembungkus kata */
+    word-break: break-word; /* Memaksa pemisahan kata jika tidak cukup ruang */
   }
 }
 
