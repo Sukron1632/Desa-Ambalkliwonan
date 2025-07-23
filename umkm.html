@@ -105,13 +105,15 @@
     <div class="wow fadeInUp" data-wow-delay="0.3s">
       <ul class="nav nav-pills justify-content-lg-center justify-content-start flex-nowrap overflow-auto mb-4 custom-scroll-tabs" id="galleryTabs" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="umkm-tab" data-bs-toggle="tab" data-bs-target="#umkm-content" type="button" role="tab" aria-controls="umkm-content" aria-selected="true">Makanan</button>
+        <button class="nav-link active" id="umkm-tab" data-bs-toggle="tab" data-bs-target="#umkm-content" type="button" role="tab" aria-controls="umkm-content" aria-selected="true">
+            Semua Hasil UMKM
+        </button>
+    </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="barang-tab" data-bs-toggle="tab" data-bs-target="#barang-content" type="button" role="tab" aria-controls="barang-content" aria-selected="false">Barang</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pertanian-tab" data-bs-toggle="tab" data-bs-target="#pertanian-content" type="button" role="tab" aria-controls="pertanian-content" aria-selected="false">Minuman</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="peternakan-tab" data-bs-toggle="tab" data-bs-target="#peternakan-content" type="button" role="tab" aria-controls="peternakan-content" aria-selected="false">Jasa</button>
+          <button class="nav-link" id="jasa-tab" data-bs-toggle="tab" data-bs-target="#jasa-content" type="button" role="tab" aria-controls="jasa-content" aria-selected="false">Jasa</button>
         </li>
       </ul>
 
@@ -120,12 +122,12 @@
           <div class="row g-4 justify-content-center" id="umkm-gallery-row"></div>
         </div>
 
-        <div class="tab-pane fade" id="pertanian-content" role="tabpanel" aria-labelledby="pertanian-tab">
-          <div class="row g-4 justify-content-center" id="pertanian-gallery-row"></div>
+        <div class="tab-pane fade" id="barang-content" role="tabpanel" aria-labelledby="barang-tab">
+          <div class="row g-4 justify-content-center" id="barang-gallery-row"></div>
         </div>
 
-        <div class="tab-pane fade" id="peternakan-content" role="tabpanel" aria-labelledby="peternakan-tab">
-          <div class="row g-4 justify-content-center" id="peternakan-gallery-row"></div>
+        <div class="tab-pane fade" id="jasa-content" role="tabpanel" aria-labelledby="jasa-tab">
+          <div class="row g-4 justify-content-center" id="jasa-gallery-row"></div>
         </div>
 
       </div>
@@ -171,7 +173,7 @@
             <div class="mb-3">
               <p class="fw-bold mb-1">Hubungi Penjual:</p>
               <a id="modalWhatsapp" href="#" target="_blank" class="btn btn-success me-2"> <i class="fab fa-whatsapp me-1"></i> WhatsApp </a>
-              <a id="modalPhone" href="#" class="btn btn-primary"> <i class="fa fa-phone me-1"></i> Telepon </a>
+
             </div>
             <p class="text-muted small">Catatan: Harga dapat berubah sewaktu-waktu. Hubungi penjual untuk ketersediaan.</p>
           </div>

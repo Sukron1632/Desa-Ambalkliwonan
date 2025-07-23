@@ -45,14 +45,43 @@ const GalleryPotensiDesa = (function ($) {
     };
 
     const _renderGalleryCards = function() {
-        for (const category in _umkmData) {
-            const rowElement = document.getElementById(`${category}-gallery-row`);
-            if (rowElement) {
-                rowElement.innerHTML = '';
-                _umkmData[category].forEach((item, index) => {
-                    const cardHtml = _createCardHTML(item, index, category);
-                    rowElement.insertAdjacentHTML('beforeend', cardHtml);
+        // Handle the "umkm" tab (now "Semua Hasil UMKM")
+        const umkmRowElement = document.getElementById('umkm-gallery-row');
+        if (umkmRowElement) {
+            umkmRowElement.innerHTML = '';
+            
+            // Combine all categories and sort by title
+            const allItems = [];
+            for (const category in _umkmData) {
+                _umkmData[category].forEach(item => {
+                    allItems.push({
+                        ...item,
+                        originalCategory: category
+                    });
                 });
+            }
+            
+            // Sort by title alphabetically
+            allItems.sort((a, b) => a.title.localeCompare(b.title, 'id'));
+            
+            // Render sorted items
+            allItems.forEach((item, index) => {
+                const cardHtml = _createCardHTML(item, index, item.originalCategory);
+                umkmRowElement.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        // Handle other categories normally
+        for (const category in _umkmData) {
+            if (category !== 'umkm') { // Skip umkm since we handled it above
+                const rowElement = document.getElementById(`${category}-gallery-row`);
+                if (rowElement) {
+                    rowElement.innerHTML = '';
+                    _umkmData[category].forEach((item, index) => {
+                        const cardHtml = _createCardHTML(item, index, category);
+                        rowElement.insertAdjacentHTML('beforeend', cardHtml);
+                    });
+                }
             }
         }
         
@@ -148,7 +177,6 @@ const GalleryPotensiDesa = (function ($) {
             description: modal.querySelector('#modalDescription'),
             price: modal.querySelector('#modalPrice'),
             whatsapp: modal.querySelector('#modalWhatsapp'),
-            phone: modal.querySelector('#modalPhone'),
             carousel: modal.querySelector('#modalProductCarousel'),
             carouselInner: modal.querySelector('#modalCarouselInner'),
             variationList: modal.querySelector('#variationList')
@@ -178,7 +206,6 @@ const GalleryPotensiDesa = (function ($) {
         elements.category.textContent = item.category;
         elements.description.textContent = item.description;
         elements.whatsapp.href = `https://wa.me/${item.whatsapp}`;
-        elements.phone.href = `tel:${item.phone}`;
     };
 
     const _setupCarousel = function(elements, item) {
