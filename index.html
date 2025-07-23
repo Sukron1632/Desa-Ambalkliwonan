@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -156,41 +156,66 @@
 
 
     <!-- Products Start -->
-    <div class="container-fluid product py-5 my-5">
+ <div class="container-fluid product py-5 my-5">
         <div class="container py-5">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium fst-italic text-primary">Potensi Desa Ambalkliwonan</p>
-                <h1 class="display-6">Jelajahi Warisan Budaya dan Karya Unggulan Kami</h1>
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s">
+                <p class="fs-5 fw-medium fst-italic text-primary">Potensi Unggulan Desa</p>
+                <h1 class="display-6">Menjelajahi Potensi Utama desa Ambalkliwonan</h1>
             </div>
-            <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
-                <a href="" class="d-block product-item rounded">
-                    <img src="img/product-1.jpg" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">Pertanian</h4>
-                        <span class="text-body">Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum</span>
-                    </div>
-                </a>
-                <a href="" class="d-block product-item rounded">
-                    <img src="img/product-2.jpg" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">Peternakan</h4>
-                        <span class="text-body">Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum</span>
-                    </div>
-                </a>
-                <a href="" class="d-block product-item rounded">
-                    <img src="img/product-3.jpg" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">Perikanan</h4>
-                        <span class="text-body">Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum</span>
-                    </div>
-                </a>
-                <a href="" class="d-block product-item rounded">
-                    <img src="img/product-4.jpg" alt="">
-                    <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-primary">UMKM</h4>
-                        <span class="text-body">Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum</span>
-                    </div>
-                </a>
+
+            <div class="potential-toggle wow fadeInUp" data-wow-delay="0.3s">
+                <button class="toggle-btn active" data-target="pertanian">
+                    <i class="fas fa-seedling"></i> Pertanian
+                </button>
+                <button class="toggle-btn" data-target="peternakan">
+                    <i class="fas fa-cow"></i> Peternakan
+                </button>
+            </div>
+
+            <div id="pertanian" class="potential-content active">
+                <div class="image-gallery mb-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <a href="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=400" data-lightbox="potensi-pertanian" data-title="Sawah Hijau Ambalkliwonan">
+                        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=400" alt="Sawah Hijau Ambalkliwonan">
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400" data-lightbox="potensi-pertanian" data-title="Panen Padi">
+                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400" alt="Panen Padi">
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400" data-lightbox="potensi-pertanian" data-title="Kebun Sayur Organik">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400" alt="Kebun Sayur Organik">
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1595273670150-bd0c3c92fc82?w=400" data-lightbox="potensi-pertanian" data-title="Petani Lokal">
+                        <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c92fc82?w=400" alt="Petani Lokal">
+                    </a>
+                </div>
+                <div class="article-description wow fadeInUp" data-wow-delay="0.7s">
+                    <h3>Potensi Pertanian Desa Ambalkliwonan</h3>
+                    <p>Desa Ambalkliwonan dikenal luas sebagai lumbung pangan dengan lahan pertanian subur yang membentang luas. Mayoritas penduduk menggantungkan hidup pada sektor pertanian, dengan komoditas utama <strong>padi organik, sayuran segar, dan buah-buahan lokal</strong>.</p>
+                    <p>Kami menerapkan sistem pertanian berkelanjutan yang ramah lingkungan, memastikan produk yang dihasilkan tidak hanya berkualitas tinggi tetapi juga sehat dan aman dikonsumsi. Inovasi dalam irigasi dan penggunaan pupuk alami terus dikembangkan untuk meningkatkan produktivitas tanpa mengorbankan kelestarian alam.</p>
+                    <p>Selain memenuhi kebutuhan lokal, hasil pertanian Ambalkliwonan juga didistribusikan ke pasar regional, menjadi tulang punggung ekonomi desa dan kebanggaan masyarakat.</p>
+                </div>
+            </div>
+
+            <div id="peternakan" class="potential-content">
+                <div class="image-gallery mb-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <a href="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=400" data-lightbox="potensi-peternakan" data-title="Kandang Sapi Perah">
+                        <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=400" alt="Kandang Sapi">
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400" data-lightbox="potensi-peternakan" data-title="Ayam Kampung Organik">
+                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400" alt="Ayam Kampung Organik">
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400" data-lightbox="potensi-peternakan" data-title="Panen Telur">
+                        <img src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400" alt="Panen Telur">
+                    </a>
+                    <a href="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=400" data-lightbox="potensi-peternakan" data-title="Kambing Etawa">
+                        <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=400" alt="Kambing Etawa">
+                    </a>
+                </div>
+                <div class="article-description wow fadeInUp" data-wow-delay="0.7s">
+                    <h3>Potensi Peternakan Desa Ambalkliwonan</h3>
+                    <p>Selain pertanian, sektor peternakan juga menjadi pilar ekonomi penting di Desa Ambalkliwonan. Kami memiliki peternakan <strong>sapi perah, ayam kampung, dan kambing etawa</strong> yang dikelola secara tradisional namun tetap memperhatikan standar kesehatan dan kesejahteraan hewan.</p>
+                    <p>Produk peternakan unggulan kami meliputi <strong>susu segar, telur ayam kampung organik, dan daging berkualitas tinggi</strong> yang bebas dari antibiotik dan hormon pertumbuhan. Masyarakat secara aktif berpartisipasi dalam program pengembangan peternakan, memastikan pasokan produk hewani yang stabil dan berkualitas.</p>
+                    <p>Potensi ini tidak hanya memenuhi kebutuhan gizi masyarakat desa, tetapi juga menjadi sumber pendapatan tambahan melalui penjualan produk olahan dan bibit ternak.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -305,6 +330,7 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -314,6 +340,7 @@
     <script src="js/components/ui-components.js"></script>
     <script src="js/components/carousel-components.js"></script>
     <script src="js/components/navigation-components.js"></script>
+    <script src="js/components/potensiDesaToggle.js"></script> 
     <script src="js/modules/gallery-desa.js"></script>
     <script src="js/core/app.js"></script>
 </body>

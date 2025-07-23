@@ -418,37 +418,247 @@
 
 /*** Products ***/
 .product {
-  background: linear-gradient(rgba(136, 180, 78, 0.1), rgba(136, 180, 78, 0.1)), url(../img/product-bg.png) left bottom no-repeat;
-  background-size: auto;
-}
+            background: linear-gradient(rgba(136, 180, 78, 0.1), rgba(136, 180, 78, 0.1));
+            padding: 80px 0;
+            /* PENTING: Gunakan position relative dan flow normal, bukan absolute positioning */
+            position: relative;
+            min-height: auto; /* Biarkan tinggi menyesuaikan konten */
+            overflow: visible; /* Jangan sembunyikan overflow */
+        }
 
-.product-carousel .owl-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.product-carousel .owl-nav .owl-prev,
-.product-carousel .owl-nav .owl-next {
-  margin: 0 10px;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  background: var(--primary);
-  border-radius: 55px;
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
-  font-size: 25px;
-  transition: 0.5s;
-}
+        .section-title p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
 
-.product-carousel .owl-nav .owl-prev:hover,
-.product-carousel .owl-nav .owl-next:hover {
-  background: #ffffff;
-  color: var(--primary);
-}
+        .section-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        /* Toggle Buttons - Diperbaiki untuk tidak tumpang tindih */
+        .potential-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .toggle-btn {
+            background-color: white;
+            color: var(--text-muted);
+            border: 2px solid var(--border-color);
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50px;
+            min-width: 180px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-light);
+            text-decoration: none;
+            user-select: none;
+        }
+
+        .toggle-btn:hover:not(.active) {
+            background-color: #e9ecef;
+            color: var(--text-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .toggle-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .toggle-btn:active {
+            transform: translateY(0);
+            transition: transform 0.1s ease-out;
+        }
+
+        .toggle-btn i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        /* Content Area - PERBAIKAN UTAMA: Gunakan display flow normal */
+        .potential-content {
+            /* HAPUS position absolute - ini yang menyebabkan tumpang tindih */
+            display: none; /* Gunakan display untuk show/hide */
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            animation-duration: 0.6s;
+            animation-fill-mode: both;
+        }
+
+        .potential-content.active {
+            display: block; /* Tampilkan konten aktif */
+            animation-name: fadeInUp;
+        }
+
+        /* Animasi Custom */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .image-gallery a {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .image-gallery a:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery a:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Article Description */
+        .article-description {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .article-description h3 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .article-description p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .article-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title h1 {
+                font-size: 2rem;
+            }
+
+            .potential-toggle {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .toggle-btn {
+                min-width: 250px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .article-description {
+                padding: 30px 25px;
+            }
+
+            .article-description h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                padding: 60px 0;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .article-description {
+                padding: 25px 20px;
+            }
+        }
+
+        /* Loading State */
+        .potential-content:not(.active) {
+            pointer-events: none;
+        }
+
+        .potential-content.active {
+            pointer-events: auto;
+        }
+
+        /* Utility Classes */
+        .wow {
+            visibility: hidden;
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .fadeInUp {
+            animation-name: fadeInUp;
+        }
+
 
 /*** About ***/
 .video {
