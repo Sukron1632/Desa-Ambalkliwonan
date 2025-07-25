@@ -2,21 +2,39 @@
   "barang": [
     {
       "id": 1,
-      "title": "Bibit Mangga Harum Manis",
-      "category": "Bibit Tanaman",
-      "description": "Bibit mangga harum manis berkualitas unggul, siap tanam. Hasil pembibitan petani lokal dengan perawatan terbaik.",
+      "title": "Kuker Bu Rogo",
+      "category": "Kue Kering dan Camilan",
+      "description": "Nikmati berbagai pilihan kue kering dan camilan lezat dari Kuker Bu Rogo! Dibuat dengan bahan-bahan berkualitas dan resep pilihan, cocok untuk teman ngemil atau suguhan spesial.",
       "whatsapp": "6281234567892",
-      "phone": "081234567892",
       "variations": [
         {
-          "name": "Tinggi 50cm",
-          "image": "img/barang-mangga-50cm.jpg",
-          "price": "Rp 30.000,-"
+          "name": "Makaroni Kecil",
+          "image": "img/umkm_desa/makaroni_1.jpg",
+          "price": "Rp 1.000"
         },
         {
-          "name": "Tinggi 100cm",
-          "image": "img/barang-mangga-100cm.jpg",
-          "price": "Rp 50.000,-"
+          "name": "Mie Lidi",
+          "image": "img/umkm_desa/mie_lidi_1.jpg",
+          "price": "Rp 1.000"
+        },
+        {
+          "name": "Makaroni Besar",
+          "image": "img/umkm_desa/makaroni_2.jpg",
+          "price": "Rp 40.000/Kg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Emping Melinjo Ambalkliwonan",
+      "category": "Pusat Produksi Emping Melinjo",
+      "description": "Temukan kreasi jahit dan desain unik hasil tangan terampil pengrajin Desa Ambalkliwonan. Menerima pesanan beragam produk jahit custom, dari pakaian hingga aksesori, dengan sentuhan personal dan kualitas terbaik.",
+      "whatsapp": "6287722243419",
+      "variations": [
+        {
+          "name": "Emping Melinjo",
+          "image": "img/umkm_desa/emping_1.jpg",
+          "price": "Mulai dari Rp 30.000/Kg"
         }
       ]
     }
@@ -30,14 +48,42 @@
       "whatsapp": "6289685524378",
       "variations": [
         {
-          "name": "Pack 6 Butir",
-          "image": "img/galeri_desa/Penjahit_1.jpg",
-          "price": "Rp 18.000,-"
+          "name": "Jasa bervariasi",
+          "image": "img/umkm_desa/Penjahit_1.jpg",
+          "price": "Mulai dari Rp 5.000 - 400.000"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Rovi Barber & Salon",
+      "category": "Perawatan Rambut, Nail Art, Facial, dan Make Up",
+      "description": "Dapatkan penampilan terbaik Anda di Rovi Barber & Salon! Kami menawarkan layanan lengkap perawatan rambut, nail art, facial, hingga make up profesional. Nikmati pelayanan terbaik dengan hasil memukau.",
+      "whatsapp": "6282138891457",
+      "variations": [
+        {
+          "name": "Jasa bervariasi",
+          "image": "img/umkm_desa/barber_1.jpg",
+          "price": "Rp 15.000"
         },
         {
-          "name": "Pack 6 Butir",
-          "image": "img/galeri_desa/Penjahit_1.jpg",
-          "price": "Rp 18.000,-"
+          "name": "Jasa bervariasi",
+          "image": "img/umkm_desa/barber_2.jpg",
+          "price": "Rp 100.000"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bengkel LAN",
+      "category": "Bengkel sepeda, motor, mobil",
+      "description": "Dapatkan penampilan terbaik Anda di Rovi Barber & Salon! Kami menawarkan layanan lengkap perawatan rambut, nail art, facial, hingga make up profesional. Nikmati pelayanan terbaik dengan hasil memukau.",
+      "whatsapp": "6287722243419",
+      "variations": [
+        {
+          "name": "Jasa bervariasi",
+          "image": "img/umkm_desa/bengkel_1.jpg",
+          "price": "Mulai dari Rp 10.000 - 500.000"
         }
       ]
     }

@@ -117,37 +117,51 @@ const GalleryPotensiDesa = (function ($) {
         `;
     };
 
-    const _getDisplayPrice = function(item) {
-        if (!item.variations || item.variations.length === 0) {
-            return 'Harga Negosiasi';
-        }
-
-        if (item.variations.length === 1) {
-            return item.variations[0].price;
-        }
-
-        const validPrices = item.variations
-            .map(v => parseFloat(v.price.replace(/[^0-9,.]/g, '').replace(',', '.')))
-            .filter(p => !isNaN(p));
-
-        if (validPrices.length === 0) {
-            return 'Harga Negosiasi';
-        }
-
-        const minPrice = Math.min(...validPrices);
-        const maxPrice = Math.max(...validPrices);
-
-        if (minPrice === maxPrice) {
-            return item.variations[0].price;
-        }
-
-        const formattedMin = `Rp ${minPrice.toLocaleString('id-ID', {
-            minimumFractionDigits: 0, 
-            maximumFractionDigits: 0
-        })},-`;
+const _getDisplayPrice = function(item) {
+    if (!item.variations || item.variations.length === 0) {
+        return 'Harga Negosiasi';
+    }
+    if (item.variations.length === 1) {
+        return item.variations[0].price;
+    }
+    const validPrices = item.variations
+        .map(v => {
+            // Remove all non-numeric characters except dots and commas
+            let cleanPrice = v.price.replace(/[^0-9,.]/g, '');
+            
+            // Handle Indonesian number format: remove dots (thousand separators) and replace comma with dot for decimal
+            // Check if there's a comma (decimal separator)
+            if (cleanPrice.includes(',')) {
+                // Split by comma to separate integer and decimal parts
+                const parts = cleanPrice.split(',');
+                if (parts.length === 2) {
+                    // Remove dots from integer part, keep decimal part
+                    cleanPrice = parts[0].replace(/\./g, '') + '.' + parts[1];
+                }
+            } else {
+                // No comma, so dots are thousand separators - remove them all
+                cleanPrice = cleanPrice.replace(/\./g, '');
+            }
+            
+            return parseFloat(cleanPrice);
+        })
+        .filter(p => !isNaN(p));
         
-        return `Mulai dari ${formattedMin}`;
-    };
+    if (validPrices.length === 0) {
+        return 'Harga Negosiasi';
+    }
+    const minPrice = Math.min(...validPrices);
+    const maxPrice = Math.max(...validPrices);
+    if (minPrice === maxPrice) {
+        return item.variations[0].price;
+    }
+    const formattedMin = `Rp ${minPrice.toLocaleString('id-ID', {
+        minimumFractionDigits: 0, 
+        maximumFractionDigits: 0
+    })},-`;
+    
+    return `Mulai dari ${formattedMin}`;
+};
 
     const _initModalEvents = function() {
         const detailModal = document.getElementById(CONFIG.MODAL_ID);

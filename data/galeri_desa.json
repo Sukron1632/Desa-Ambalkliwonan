@@ -1,8 +1,8 @@
 {
-  "acara_kebudayaan": [
+"acara_kebudayaan": [
     {
       "id": 1,
-      "title": "Pementasan Wayang Kulit",
+      "title": "Pementasan Wayang Kulit 2025",
       "category": "Seni Pertunjukan",
       "description": "Pagelaran wayang kulit di Desa Ambalkliwonan adalah acara tahunan yang diselenggarakan antara Juni dan Agustus sebagai Merti Bumi atau Sedekah Bumi. Ini adalah wujud syukur atas hasil panen, menampilkan dalang lokal dengan cerita klasik yang edukatif dan menghibur.",
       "date": "Setahun Sekali (Juni - Agustus)",
@@ -14,23 +14,185 @@
       "images": [
         "img/galeri_desa/wayangan.jpg"
       ]
-    }
-  ],
-  "pembangunan_desa": [
+    },
     {
-      "id": 1,
-      "title": "Pembangunan Jembatan Swadaya",
-      "category": "Proyek Pembangunan",
-      "description": "Proyek pembangunan jembatan penghubung antar dusun yang dikerjakan secara swadaya oleh masyarakat desa untuk meningkatkan aksesibilitas.",
-      "date": "Maret - Mei 2024",
-      "time": "Sesuai Jadwal Gotong Royong",
-      "location": "Sungai Kersik",
-      "contact_person": "Kepala Dusun (081234567893)",
-      "whatsapp": "6281234567893",
+      "id": 2,
+      "title": "MusDes Ketahanan Pangan dan review RKPD 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa (MusDes) membahas program ketahanan pangan dan meninjau Rencana Kerja Pemerintah Desa (RKPDes) untuk tahun 2025. Diskusi ini penting untuk perencanaan pembangunan desa.",
+      "date": "2025",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
       "type": "image",
       "images": [
-        "img/jembatan-1.jpg",
-        "img/jembatan-2.jpg"
+        "img/galeri_desa/ketahanan_pangan_review_RKPDesa_2025.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Musyawarah Desa Ambalkliwonan 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah rutin desa untuk membahas berbagai agenda penting terkait pembangunan dan kesejahteraan masyarakat Desa Ambalkliwonan sepanjang tahun 2025.",
+      "date": "2025",
+      "time": "19.00 - 21.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/musyawarah_dusun_2025.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Musyawarah Pembentukan Koperasi Merah Putih 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah untuk membahas pembentukan Koperasi Merah Putih di Desa Ambalkliwonan, bertujuan untuk meningkatkan perekonomian dan kesejahteraan anggota masyarakat.",
+      "date": "2025",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/pembentukan_koperasi_merah_putih_2025.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Musyawarah Penetapan KPM BLT DD 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa untuk menetapkan Keluarga Penerima Manfaat (KPM) Bantuan Langsung Tunai Dana Desa (BLT DD) tahun 2025, memastikan bantuan tersalurkan secara tepat sasaran.",
+      "date": "2025",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_penetapan_KPM_BLT_DD_2025.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Musyawarah Penetapan RKP Desa 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa untuk menetapkan Rencana Kerja Pemerintah Desa (RKPDes) tahun 2025, sebagai pedoman dalam pelaksanaan program dan kegiatan desa.",
+      "date": "2025",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_penetapan_RKP-Des_2025.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Musyawarah Negosiasi Harga Pengaspalan Jalan 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah membahas negosiasi harga untuk proyek pengaspalan jalan di Desa Ambalkliwonan pada tahun 2025, guna memastikan kualitas dan efisiensi anggaran.",
+      "date": "2025",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_pengaspalan_2025.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Musyawarah Penyusunan RPJMDes 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa untuk menyusun Rencana Pembangunan Jangka Menengah Desa (RPJMDes) tahun 2025, sebagai kerangka pembangunan desa untuk enam tahun ke depan.",
+      "date": "2025",
+      "time": "19.00 - 21.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_penyusunan_rpjmDesa_2025.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Musyawarah Perancangan RPJMDes 2025",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa dalam rangka perancangan Rencana Pembangunan Jangka Menengah Desa (RPJMDes) 2025, melibatkan partisipasi aktif masyarakat.",
+      "date": "2025",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_rancangan_RKP-Des_2025.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Acara Pasar Murah 2024",
+      "category": "Acara Sosial",
+      "description": "Acara pasar murah yang diselenggarakan untuk membantu masyarakat mendapatkan kebutuhan pokok dengan harga terjangkau, sebagai wujud kepedulian sosial desa.",
+      "date": "2024",
+      "time": "09.00 - 16.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/pasar_murah_2024.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Musyawarah Pengadaan Mobil Siaga Desa 2024",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa untuk membahas pengadaan mobil siaga desa pada tahun 2024, bertujuan meningkatkan pelayanan darurat dan kesehatan masyarakat.",
+      "date": "2024",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_pengadaan_mobil_siaga_desa_2024.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Musyawarah Pembahasan RAPBD 2024",
+      "category": "Musyawarah Desa",
+      "description": "Musyawarah Desa untuk membahas Rancangan Anggaran Pendapatan dan Belanja Desa (RAPBD) tahun 2024, guna perencanaan keuangan desa yang transparan dan akuntabel.",
+      "date": "2024",
+      "time": "09.00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/rapat_RAPBD_2024.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Pementasan Wayang Kulit 2024",
+      "category": "Seni Pertunjukan",
+      "description": "Pagelaran wayang kulit di Desa Ambalkliwonan adalah acara tahunan yang diselenggarakan antara Juni dan Agustus sebagai Merti Bumi atau Sedekah Bumi. Ini adalah wujud syukur atas hasil panen, menampilkan dalang lokal dengan cerita klasik yang edukatif dan menghibur.",
+      "date": "Setahun Sekali (Juni - Agustus)",
+      "time": "20:00 - Selesai",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/wayangan_2024.jpg"
       ]
     }
   ],
@@ -46,18 +208,47 @@
   "lain_lain": [
     {
       "id": 1,
-      "title": "Kegiatan Posyandu Rutin",
+      "title": "Kegiatan Posyandu",
       "category": "Kesehatan Masyarakat",
       "description": "Kegiatan pos pelayanan terpadu (Posyandu) rutin bulanan untuk pemeriksaan kesehatan balita, ibu hamil, dan lansia.",
-      "date": "Setiap tanggal 5",
+      "date": "Setiap tanggal 7",
       "time": "08:00 - 12:00",
-      "location": "Posyandu Mawar, Desa Kersik",
-      "contact_person": "Bidan Desa (081234567894)",
-      "whatsapp": "6281234567894",
+      "location": "Posyandu Rahayu, Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
       "type": "image",
       "images": [
-        "img/posyandu-1.jpg",
-        "img/posyandu-2.jpg"
+        "img/galeri_desa/posyandu_1.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Kegiatan Senam",
+      "category": "Kebugaran Masyarakat",
+      "description": "Kegiatan senam rutin untuk menjaga kebugaran dan kesehatan tubuh bersama masyarakat Desa Ambalkliwonan.",
+      "date": "Setiap Hari Kamis",
+      "time": "16:00 - 17:15",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/senam_1.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Kegiatan Sosial",
+      "category": "Bantuan Bahan Pangan",
+      "description": "Kegiatan pembagian bantuan sosial berupa bahan pangan kepada warga kurang mampu di Desa Ambalkliwonan.",
+      "date": "-",
+      "time": "08:00 - 11.00",
+      "location": "Balai Desa Ambalkliwonan",
+      "contact_person": "",
+      "whatsapp": "",
+      "type": "image",
+      "images": [
+        "img/galeri_desa/bantuan_sosial.jpg"
       ]
     }
   ],
