@@ -1088,7 +1088,7 @@
                     pdfFrame.contentWindow.print();
                 } else {
                     // Fallback: open in new window and print
-                    const printWindow = window.open('peta_desa.pdf', '_blank');
+                    const printWindow = window.open('img/profil_desa/peta_desa.pdf', '_blank');
                     printWindow.onload = function() {
                         printWindow.print();
                     };
@@ -1100,7 +1100,7 @@
         }
 
         function openInNewTab() {
-            window.open('peta_desa.pdf', '_blank');
+            window.open('img/profil_desa/peta_desa.pdf', '_blank');
             showNotification('Membuka peta di tab baru...', 'info');
         }
 
