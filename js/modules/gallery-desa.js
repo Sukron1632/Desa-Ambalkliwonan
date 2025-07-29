@@ -213,7 +213,7 @@ const GalleryDesa = (function ($) {
 
     const modal = this;
     const item = _galleryData[category]?.find((dataItem) => dataItem.id === itemId);
-    
+
     if (!item) {
       console.error("Item not found:", { category, itemId });
       return;
@@ -310,12 +310,12 @@ const GalleryDesa = (function ($) {
       // Show/hide carousel controls based on image count
       const prevBtn = elements.carousel.querySelector(".carousel-control-prev");
       const nextBtn = elements.carousel.querySelector(".carousel-control-next");
-      
+
       if (item.images.length > 1) {
         prevBtn.style.display = "flex";
         nextBtn.style.display = "flex";
         elements.indicators.style.display = "flex";
-        
+
         // Initialize Bootstrap Carousel
         _currentImageCarouselInstance = new bootstrap.Carousel(elements.carousel, {
           interval: 5000,

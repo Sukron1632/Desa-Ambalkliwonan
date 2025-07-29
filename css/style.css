@@ -1482,15 +1482,15 @@
 
 /* Style untuk thumbnail PDF */
 .pdf-thumbnail {
-    width: 100%;
-    height: auto; /* Memastikan rasio aspek terjaga */
-    display: block; /* Penting untuk menghilangkan spasi bawah jika ada */
-    object-fit: contain; /* Mengatur bagaimana gambar mengisi kontainer tanpa crop, menjaga rasio aspek */
-    max-height: 50vh; /* Batasi tinggi maksimum agar tidak terlalu besar di mobile */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 0 auto; /* Tengahkna gambar */
+  width: 100%;
+  height: auto; /* Memastikan rasio aspek terjaga */
+  display: block; /* Penting untuk menghilangkan spasi bawah jika ada */
+  object-fit: contain; /* Mengatur bagaimana gambar mengisi kontainer tanpa crop, menjaga rasio aspek */
+  max-height: 50vh; /* Batasi tinggi maksimum agar tidak terlalu besar di mobile */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Tengahkna gambar */
 }
 
 .denah-desa::before {
@@ -1634,66 +1634,67 @@
 }
 
 /* Sesuaikan tinggi pdf-container untuk mobile */
-@media (max-width: 767.98px) { /* Gunakan breakpoint yang sama dengan d-md-none */
-    .pdf-container {
-        height: auto; /* Hapus tinggi tetap agar menyesuaikan konten */
-        min-height: unset; /* Hapus min-height untuk fleksibilitas */
-        display: flex; /* Gunakan flexbox untuk menengahkan konten */
-        align-items: center; /* Tengahkan vertikal */
-        justify-content: center; /* Tengahkan horizontal */
-        padding: 15px; /* Tambahkan padding agar gambar tidak terlalu mepet tepi */
-    }
+@media (max-width: 767.98px) {
+  /* Gunakan breakpoint yang sama dengan d-md-none */
+  .pdf-container {
+    height: auto; /* Hapus tinggi tetap agar menyesuaikan konten */
+    min-height: unset; /* Hapus min-height untuk fleksibilitas */
+    display: flex; /* Gunakan flexbox untuk menengahkan konten */
+    align-items: center; /* Tengahkan vertikal */
+    justify-content: center; /* Tengahkan horizontal */
+    padding: 15px; /* Tambahkan padding agar gambar tidak terlalu mepet tepi */
+  }
 
-    /* Perbaikan posisi loading spinner di mobile */
-    .loading-spinner {
-        position: relative; /* Buat relatif agar tidak mengganggu layout */
-        top: auto;
-        left: auto;
-        transform: none;
-        padding: 20px; /* Kurangi padding untuk ukuran yang lebih kecil */
-        box-shadow: none; /* Hilangkan shadow agar tidak terlalu ramai */
-        margin-top: 20px; /* Beri sedikit jarak dari atas */
-    }
+  /* Perbaikan posisi loading spinner di mobile */
+  .loading-spinner {
+    position: relative; /* Buat relatif agar tidak mengganggu layout */
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 20px; /* Kurangi padding untuk ukuran yang lebih kecil */
+    box-shadow: none; /* Hilangkan shadow agar tidak terlalu ramai */
+    margin-top: 20px; /* Beri sedikit jarak dari atas */
+  }
 
-    /* Sesuaikan kontrol mobile agar lebih ramping */
-    .map-controls.d-md-none { /* Gunakan kelas spesifik agar tidak bentrok */
-        position: relative; /* Pastikan posisi relatif */
-        top: auto;
-        right: auto;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center; /* Tambahkan align-items untuk vertikal */
-        margin-top: 20px; /* Beri jarak dari gambar atau elemen di atasnya */
-        margin-bottom: 15px; /* Jarak dari bagian bawah */
-        flex-wrap: wrap; /* Izinkan wrap jika tombol terlalu banyak */
-        gap: 10px; /* Jarak antar tombol */
-    }
-    
-    .map-controls.d-md-none .control-btn {
-        width: auto; /* Biarkan lebar menyesuaikan konten */
-        height: auto;
-        padding: 10px 15px; /* Sesuaikan padding agar terlihat seperti tombol bukan hanya ikon */
-        border-radius: 25px; /* Sedikit lebih membulat */
-        font-size: 14px; /* Kecilkan ukuran font */
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Kurangi shadow */
-        flex-shrink: 0; /* Hindari tombol menyusut */
-        display: flex;
-        align-items: center;
-    }
-    .map-controls.d-md-none .control-btn i {
-        margin-right: 5px; /* Jarak antara ikon dan teks */
-    }
+  /* Sesuaikan kontrol mobile agar lebih ramping */
+  .map-controls.d-md-none {
+    /* Gunakan kelas spesifik agar tidak bentrok */
+    position: relative; /* Pastikan posisi relatif */
+    top: auto;
+    right: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Tambahkan align-items untuk vertikal */
+    margin-top: 20px; /* Beri jarak dari gambar atau elemen di atasnya */
+    margin-bottom: 15px; /* Jarak dari bagian bawah */
+    flex-wrap: wrap; /* Izinkan wrap jika tombol terlalu banyak */
+    gap: 10px; /* Jarak antar tombol */
+  }
+
+  .map-controls.d-md-none .control-btn {
+    width: auto; /* Biarkan lebar menyesuaikan konten */
+    height: auto;
+    padding: 10px 15px; /* Sesuaikan padding agar terlihat seperti tombol bukan hanya ikon */
+    border-radius: 25px; /* Sedikit lebih membulat */
+    font-size: 14px; /* Kecilkan ukuran font */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Kurangi shadow */
+    flex-shrink: 0; /* Hindari tombol menyusut */
+    display: flex;
+    align-items: center;
+  }
+  .map-controls.d-md-none .control-btn i {
+    margin-right: 5px; /* Jarak antara ikon dan teks */
+  }
 }
-
 
 /* Jika Anda menggunakan `map-controls` di desktop, pastikan tidak bentrok */
 .map-controls.d-none.d-md-block {
-    position: absolute; /* Tetap absolute untuk desktop */
-    top: 20px;
-    right: 20px;
-    flex-direction: column; /* Tetap kolom untuk desktop */
-    gap: 10px;
-    margin-top: 0; /* Hapus margin top yang mungkin terbawa dari mobile */
+  position: absolute; /* Tetap absolute untuk desktop */
+  top: 20px;
+  right: 20px;
+  flex-direction: column; /* Tetap kolom untuk desktop */
+  gap: 10px;
+  margin-top: 0; /* Hapus margin top yang mungkin terbawa dari mobile */
 }
 
 /* Fullscreen styles */
